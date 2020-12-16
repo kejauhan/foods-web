@@ -22,7 +22,8 @@ import {
     AccordionItem,
     AccordionButton,
     AccordionPanel,
-    AccordionIcon
+    AccordionIcon,
+    useColorMode
 } from '@chakra-ui/react';
 import React, { Fragment } from 'react'
 import Ingredient from './button/ingre'
@@ -35,6 +36,7 @@ import Diet from './button/Diet'
 const Recipe = ({foodRecipe}) => {
     const {label, image, url, healthLabels, dietLabels, ingredients, digest } = foodRecipe.recipe;
     const { isOpen, onOpen, onClose } = useDisclosure()
+    const { colorMode } = useColorMode();
     return (
         <Fragment>
             <Container>
@@ -46,7 +48,7 @@ const Recipe = ({foodRecipe}) => {
                 borderRadius="12px"
                 bg="#28abb9"
                 textAlign="center"
-                color="blue.800"
+                color="#045762"
                 >
                     <Text 
                     textShadow="1px 1px 1px  #DDDDDD"  
@@ -78,11 +80,11 @@ const Recipe = ({foodRecipe}) => {
                             </ModalContent>
                         </Modal>
 
-                        <Popover >
+                        <Popover>
                         <PopoverTrigger>
                             <Button bg="#ff9a8c">Labels Info</Button>
                         </PopoverTrigger>
-                        <PopoverContent>
+                        <PopoverContent backgroundColor = {colorMode === "light" ? "gray.100" : "gray.100"}>
                             <PopoverArrow />
                             <PopoverCloseButton />
                             <PopoverHeader>Diet and Health Info</PopoverHeader>
@@ -101,7 +103,7 @@ const Recipe = ({foodRecipe}) => {
                             </Box>
                             <AccordionIcon />
                             </AccordionButton>
-                            <AccordionPanel pb={4}>
+                            <AccordionPanel fontWeight="bold" pb={4}>
                             <IDetails Digest={digest} />
                             </AccordionPanel>
                         </AccordionItem>
