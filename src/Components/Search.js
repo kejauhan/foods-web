@@ -45,12 +45,12 @@ const Search = ()=>{
         <Fragment>
             <Container>
                 <Box 
-                bg="red.600" 
+                bg="#ea2c62" 
                 boxShadow="dark-lg" 
                 marginTop="20px" 
                 padding="35px" 
                 borderRadius="12px"
-                color="grey.800"
+                color="#f3f2da"
                 textShadow="0px 2px 2px  #DDDDDD" 
                 marginLeft="5px"
                 >
@@ -58,21 +58,21 @@ const Search = ()=>{
                         <Heading textShadow="1px 1px BDBDBD" m="6" align="center" marginTop="30px" as="h2" size="xl">
                             Search Food Down Below!!!<br/>
                             <Text fontSize="xs">Then Magic Will Happen</Text>
-                            <Flex marginTop="20px" marginLeft="160px" height="80px" width="50px">
-                                <img src={logo1} alt="logo" ></img>
+                            <Flex marginTop="20px" marginLeft="45%" height="80px" width="50px">
+                                <img src={logo1} alt="logo" />
                             </Flex>
                         </Heading>
 
                     </Stack>
                     <Flex marginLeft="auto">
-                        <Input value={input} onChange={getValue} marginTop="50px" placeholder="Search Food" size="md" />
-                        <Button marginLeft="3px" onClick={fetchData} marginTop="50px" colorScheme="blue">Search</Button>
+                        <Input outline="blue.800" value={input} onChange={getValue} marginTop="50px" placeholder="Search Food" size="md" />
+                        <Button marginLeft="1px" onClick={fetchData} marginTop="50px" colorScheme="blue">Search</Button>
                     </Flex>
                 </Box>
             </Container>
 
             <Box>
-                {food!==[] && food.map(recipe => <Recipe key={keyform()} foodRecipe={recipe} />)}
+                {food.map(recipe => <Recipe key={keyform()} foodRecipe={recipe} />)}
             </Box>
 
         </Fragment>

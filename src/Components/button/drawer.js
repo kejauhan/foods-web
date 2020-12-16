@@ -5,10 +5,13 @@ import {
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
-  Input,  
+  IconButton,
+  useDisclosure,
   Button,
-  useDisclosure
+  Box
 } from "@chakra-ui/react";
+import {HiMenu} from 'react-icons/hi'
+import {Link} from "react-router-dom"
 
 const MenuDrawer = () =>{
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -16,7 +19,7 @@ const MenuDrawer = () =>{
 
   return(
     <Fragment>
-      <Button ref={btnRef} onClick={onOpen}>Menu</Button>
+      <IconButton icon={<HiMenu />} ref={btnRef} onClick={onOpen} />
       <Drawer
       isOpen={isOpen}
       placement="right"
@@ -29,7 +32,13 @@ const MenuDrawer = () =>{
               Menu
             </DrawerHeader>
             <DrawerBody>
-              <Input placeholder="Type Something" />
+              <Box>
+                <Link to="/about">
+                <Button colorScheme="orange" isFullWidth>
+                  About
+                </Button>
+                </Link>
+              </Box>
             </DrawerBody>
           </DrawerContent>
         </DrawerOverlay>
