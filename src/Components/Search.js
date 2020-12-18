@@ -19,7 +19,7 @@ import logo1 from "./img/logo1.png"
 const Search = ()=>{
     const [input,setInput] = useState("")
     const [food,getFood] = useState([]);
-    const url = `https://api.edamam.com/search?q=${input}&app_id=0ed4f19f&app_key=6f2ca6169f7e5d4492afebec2fabde91`
+    const url = `https://api.edamam.com/search?q=${input}&app_id=b6d2ba3f&app_key=1f0634628b6b883b38c77098974ac3ee`
 
 {/*Fetch API*/}
     const getData = async() =>{
