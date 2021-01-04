@@ -37,15 +37,8 @@ const About = () =>{
                     Created By:
                   </Text>
                   <Text>
-                      <ChakraLink color="#2C7AD7" href="https://github.com/kejauhan">Mohamad Farhan - 00000037928</ChakraLink>
+                      <ChakraLink color="#2C7AD7" href="https://github.com/kejauhan">Mohamad Farhan</ChakraLink>
                   </Text>
-                  <Text>
-                      <ChakraLink color="#2C7AD7" href="https://github.com/tjaptjien1498/">Muhammad Rizky Febrian Syamsurie - 00000016443</ChakraLink>
-                  </Text>
-                  <Text>
-                      <ChakraLink color="#2C7AD7" href="https://github.com/35891">Dharma Hutama Husein - 00000035891</ChakraLink>
-                  </Text>
-
 
                 </Box>
 
